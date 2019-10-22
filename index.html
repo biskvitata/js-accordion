@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accordion demo page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/accordion.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/accordion.js"></script>
+</head>
+
+<body>
+  <h1>Accordion demo page</h1>
+  <div id="my-accordion"></div>
+
+  <script>
+    var options = {
+      container: 'my-accordion',
+      mainTitle: 'Main accordion title',
+      panels: [{
+        title: 'My profile',
+        subtitle: 'Update your profile information',
+        content: '<p>HTML content for this panel</p>'
+      }, {
+        title: 'Change password',
+        subtitle: 'Change your login password',
+        content: '<p>HTML content for this panel</p>'
+      },
+      {
+        title: 'No description title',
+        content: '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque perferendis odit quaerat illum rem consectetur ab accusantium est, quod rerum assumenda iste fuga, id cum, sit doloremque at minus necessitatibus? Animi voluptas dolore placeat neque cumque autem sunt quam cupiditate nostrum, provident, debitis, saepe quibusdam. Odit nostrum doloremque eos excepturi sint labore quasi accusantium quas voluptate sequi porro similique laudantium perspiciatis, eum sit debitis doloribus, officiis quod reprehenderit aliquid nobis, corporis cupiditate! Sunt aperiam sint quidem ipsum placeat veniam fuga beatae, doloribus repellat error ex tempore culpa, est praesentium optio amet reiciendis odit consequatur, eveniet provident voluptatum a dolore! Veritatis?</p>'
+      }]
+    };
+    var accordion = new Accordion(options);
+  </script>
+</body>
+</html>

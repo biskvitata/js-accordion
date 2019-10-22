@@ -1,0 +1,139 @@
+$blue: #0465ac;
+$darkGrey: #333;
+
+.accordion {
+  max-width: 800px;
+  font-family: 'Open Sans', sans-serif;
+  
+   & &__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: $blue;
+    margin: 0 0 12px 0;
+    transition: font-size .2s;
+
+    &--main {
+      font-size: 18px;
+      color: $darkGrey;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  & &__subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & &__tab {
+    background: #fff;
+    transition: margin .2s;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+
+    &:first-child {
+      margin-top: 0px !important;
+    }
+
+    &--main {
+      padding: 0 25px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    &--expandable {
+      cursor: pointer;
+    }
+
+    + .accordion__tab {
+      border-top: 1px solid #e4e6e5;
+    }
+
+    .accordion__arrow__up {
+      display: none;
+    }
+
+    .accordion__arrow__down {
+      display: block;
+    }
+
+    &.active {
+      margin: 30px 0;
+
+      .accordion__title {
+        font-size: 18px;
+      }
+
+      .accordion__body {
+        padding-top: 10px;
+        padding-bottom: 25px;
+      }
+
+      .accordion__body--alt {
+        padding-top: 15px;
+        padding-bottom: 25px;
+      }
+
+      .accordion__arrow__up {
+        display: block;
+      }
+  
+      .accordion__arrow__down {
+        display: none;
+      }
+    }
+  }
+
+  & &__header {
+    padding: 0 25px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &__container {
+      width: 100%;
+      padding-right: 50px;
+      box-sizing: border-box;
+    }
+
+    &--alt {
+      height: 69px;
+    }
+  }
+
+  & &__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s, padding 0.2s;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    p {
+      font-size: 13px;
+      color: $darkGrey;
+      margin: 0;
+    }
+  }
+
+  & i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    font-size: 26px;
+    margin-left: 25px;
+    color: $blue;
+  }
+}
